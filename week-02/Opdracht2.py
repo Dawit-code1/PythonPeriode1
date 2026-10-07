@@ -12,6 +12,13 @@
 #
 # Test je programma daarna met verschillende waardes voor age.
 
+age = 20
+
+if age >= 18:
+    print("Je bent volwassen.")
+else:
+    print("Je bent nog geen 18.")
+
 
 
 # Opdracht 2 - Voldoende of onvoldoende
@@ -28,6 +35,12 @@
 #   Print: "Je hebt een onvoldoende."
 #
 # Test je programma met verschillende cijfers.
+
+cijfer = 7 
+if cijfer >= 5.5:
+    print ("je hebt een voldoende!")
+else:
+    print ("je hebt een onvoldoende.")
 
 
 
@@ -51,6 +64,12 @@
 # 6
 # 9
 
+if cijfer >= 8:
+    print ("goed gedaan!")
+elif cijfer >= 5.5:
+    print ("voldoende!")
+else:
+    print ("onvoldoende.")
 
 
 # Opdracht 4 - Game Character
@@ -73,6 +92,14 @@
 # Als dit zo is:
 # Print "Je hebt een schild!"
 
+health =75
+has_shield = True
+
+if health >= 50:
+    print ("Je hebt genoeg health.")
+
+if has_shield == True:
+    print ("Je hebt een schild!")
 
 
 # Opdracht 5 - Mag je naar binnen?
@@ -97,7 +124,12 @@
 #
 # Test daarna wat er gebeurt als je de waardes verandert.
 
-
+age = 20
+has_ticket = True
+if age >= 18 and has_ticket == True:
+    print ("Je mag naar binnen!")
+else:
+    print ("Je mag niet naar binnen.")
 
 # Opdracht 6 - Tellen
 #
@@ -114,7 +146,8 @@
 #
 # Gebruik hiervoor range().
 
-
+for i in range(1, 11):
+    print(i)
 
 # Opdracht 7 - Tafel van 5
 #
@@ -131,7 +164,9 @@
 # Gebruik de variabele uit je for-loop
 # om de berekening te maken.
 
-
+tafel = 5
+for i in range(1, 11):
+    print(f"{i} x {tafel} = {i * tafel}")
 
 # Opdracht 8 - Countdown
 #
@@ -158,7 +193,10 @@
 # 1
 # GO!
 
-
+countdown = 10
+while countdown > 0:
+    print(countdown)
+    countdown -= 1    
 
 # Opdracht 9 - Health verliezen
 #
@@ -179,6 +217,11 @@
 # Health: 40
 # Health: 20
 # Health: 0
+
+health = 100
+for i in range(5):
+    health -= 20
+    print(f"Health: {health}")
 
 
 
@@ -204,7 +247,11 @@
 # Bijvoorbeeld:
 # 4 % 2 == 0
 
-
+for getal in range(1, 11):
+    if getal % 2 == 0:
+        print(getal, "is even")
+    else:
+        print(getal, "is oneven")
 
 # Opdracht 11 - Vijanden verslaan - BONUS
 #
@@ -268,3 +315,13 @@
 # Voeg health en damage toe aan je speler.
 # Iedere keer dat de speler een level omhoog gaat,
 # krijgt hij 5 extra damage.
+
+for enemy in range(5):
+    enemy_health = 30
+    while enemy_health > 0:
+        enemy_health -= 10
+        if enemy_health > 0:
+            print(f"Vijand heeft nog {enemy_health} health.")
+        else:
+            print("Vijand verslagen!")
+            
